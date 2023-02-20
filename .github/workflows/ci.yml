@@ -49,7 +49,7 @@ jobs:
         run: ./scripts/hadoop.sh stop
   
   test_python_27:
-    needs: test_python_27
+    needs: test_python_36
     name: "Test Python 2.7"
     runs-on: ubuntu-18.04
     steps:
