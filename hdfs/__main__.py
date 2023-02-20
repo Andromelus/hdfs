@@ -233,6 +233,7 @@ def main(argv=None, client=None):
         progress=progress,
       )
   elif args['upload']:
+    print(local_path)
     append = args['--append']
     if local_path == '-':
       client.write(
