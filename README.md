@@ -36,7 +36,7 @@ In [3]: with CLIENT.read('models/2.json', encoding='utf-8') as reader:
 
 ## Features
 
-* Python (2 and 3) bindings for the [WebHDFS][] (and [HttpFS][]) API,
+* Python 3 bindings for the [WebHDFS][] (and [HttpFS][]) API,
   supporting both secure and insecure clusters.
 * Command line interface to transfer files and start an interactive client
   shell, with aliases for convenient namenode URL caching.
@@ -64,8 +64,8 @@ HdfsCLI is tested against both [WebHDFS][] and [HttpFS][]. There are two ways
 of running tests (see `scripts/` for helpers to set up a test HDFS cluster):
 
 ```sh
-$ HDFSCLI_TEST_URL=http://localhost:50070 nosetests # Using a namenode's URL.
-$ HDFSCLI_TEST_ALIAS=dev nosetests # Using an alias.
+$ HDFSCLI_TEST_URL=http://localhost:50070 pytest # Using a namenode's URL.
+$ HDFSCLI_TEST_ALIAS=dev pytest # Using an alias.
 ```
 
 ## Contributing
